@@ -1,1 +1,0 @@
-# NTT-STARS.github.io
