@@ -14,7 +14,7 @@ a:focus, a:hover { text-decoration: none; color: #f67800; }
 
 .content{padding-top:80px; padding-bottom:80px;}
 .mb40{margin-bottom:40px;}
-.team-block { margin-bottom: 20px;width: 60% }
+.team-block { margin-bottom: 20px;width: 62% }
 .team-content { position: absolute; background-color: rgba(17, 24, 31, 0.8); bottom: 0px; display: inline-block; width: 100%; color: #fff; padding: 30px; }
 .team-img { position: relative; }
 .team-img img { width: 100%; }
@@ -24,9 +24,144 @@ a:focus, a:hover { text-decoration: none; color: #f67800; }
 .team-img:hover .overlay { opacity: .8; }
 .team-img:hover .team-content { opacity: 0; }
 .text { color: #fff; position: absolute; top: 30%; left: 30%; transform: translate(-26%, -26%); -ms-transform: translate(-26%, -26%); right: 0; font-weight: 400; font-size: 10px; }
-canvas {
-    display: block;
-    width: 100vw;
-    height: 100vh;
-    cursor: none; 
+@-webkit-keyframes fadeIn { from { opacity:0; } to { opacity:1; } }
+@-moz-keyframes fadeIn { from { opacity:0; } to { opacity:1; } }
+@keyframes fadeIn { from { opacity:0; } to { opacity:1; } }
+
+.fade-in {
+  opacity:0;  /* make things invisible upon start */
+  -webkit-animation:fadeIn ease-in 1;  /* call our keyframe named fadeIn, use animattion ease-in and repeat it only 1 time */
+  -moz-animation:fadeIn ease-in 1;
+  animation:fadeIn ease-in 1;
+
+  -webkit-animation-fill-mode:forwards;  /* this makes sure that after animation is done we remain at the last keyframe value (opacity: 1)*/
+  -moz-animation-fill-mode:forwards;
+  animation-fill-mode:forwards;
+
+  -webkit-animation-duration:1s;
+  -moz-animation-duration:1s;
+  animation-duration:1s;
+}
+
+.fade-in.one {
+  -webkit-animation-delay: 0.9s;
+  -moz-animation-delay: 0.9s;
+  animation-delay: 0.9s;
+}
+
+.fade-in.two {
+  -webkit-animation-delay: 1.4s;
+  -moz-animation-delay:1.4s;
+  animation-delay: 1.4s;
+}
+
+.fade-in.three {
+  -webkit-animation-delay: 1.9s;
+  -moz-animation-delay: 1.9s;
+  animation-delay: 1.9s;
+}
+.fade-in.four {
+    -webkit-animation-delay: 2.4s;
+    -moz-animation-delay: 2.4s;
+    animation-delay: 2.4s;
   }
+  .fade-in.five{
+    -webkit-animation-delay: 2.9s;
+    -moz-animation-delay: 2.9s;
+    animation-delay: 2.9s;
+  }
+  .fade-in.six {
+    -webkit-animation-delay: 3.4s;
+    -moz-animation-delay: 3.4s;
+    animation-delay: 3.4s;
+  }
+  section {
+    margin: 0 auto;
+    text-align: center;
+    width: 960px;
+  }
+  
+  .hex_row_even {
+    display: inline-block;
+    margin: 0 auto -275px auto;
+    overflow: hidden;
+  }
+  
+  .hex_row_odd {
+    display: inline-block;
+    margin: 0 auto -275px auto;
+    overflow: hidden;
+  }
+  
+  .center {
+    float: left;
+    margin: 20px 10px;
+    width: 220px;
+  }
+  
+  .hexagon {
+    -moz-transform: rotate(120deg);
+    -ms-transform: rotate(120deg);
+    -webkit-transform: rotate(120deg);
+    transform: rotate(120deg);
+    cursor: pointer;
+    height: 440px;
+    overflow: hidden;
+    visibility: hidden;
+    width: 220px;
+  }
+  
+  .hex1 {
+    -moz-transform: rotate(-60deg);
+    -ms-transform: rotate(-60deg);
+    -webkit-transform: rotate(-60deg);
+    transform: rotate(-60deg);
+    height: 100%;
+    overflow: hidden;
+    width: 100%;
+  }
+  
+  .hex2 {
+    -moz-transform: rotate(-60deg);
+    -ms-transform: rotate(-60deg);
+    -webkit-transform: rotate(-60deg);
+    transform: rotate(-60deg);
+    height: 100%;
+    position: relative;
+    visibility: visible;
+    width: 100%;
+  }
+  
+  .desc {
+    color: white;
+    font-family: 'Lato', sans-serif;
+    font-size: 1.5em;
+    font-weight: 300;
+    height: 440px;
+    line-height: 1.5em;
+    position: absolute;
+    text-align: center;
+    text-transform: uppercase;
+    visibility: visible;
+    width: 220px;
+  }
+  .desc.base {
+    background: rgba(230, 0, 98, 0.75);
+  }
+  .desc.one {
+    background: rgba(252, 171, 55, 0.75);
+  }
+  .desc.two {
+    background: rgba(169, 160, 50, 0.75);
+  }
+  .desc.three {
+    background: rgba(83, 70, 54, 0.75);
+  }
+  .desc h2 {
+    margin: 165px 20px 0 20px;
+  }
+  .desc p {
+    font-size: .5em;
+    text-transform: lowercase;
+  }
+  
